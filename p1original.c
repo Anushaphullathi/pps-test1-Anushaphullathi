@@ -5,7 +5,6 @@ int main()
   printf("enter any two no\n");
   scanf("%d%d",&a,&b);
   c=a+b;
-  printf("%d+%d=%d",a,b,c);
-return 0;
-
+  printf("%d+%d=%d\n",a,b,c);
+  return 0;
 }

@@ -1,0 +1,85 @@
+GNU bash, version 4.4.20(1)-release (x86_64-pc-linux-gnu)
+ 
+ 
+ gcc -g p2original.c
+ ./a.out
+enter the value of a
+34
+enter the value of a
+56
+sum of 34 + 56=90
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x810: file p2original.c, line 23.
+(gdb) r
+Starting program: /home/runner/pps-test1-Anushaphullathi/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p2original.c:23
+23    p=input();
+(gdb) s
+input () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter the value of a\n");
+(gdb) n
+enter the value of a
+6     scanf("%d",&a);
+(gdb) n
+45
+7     return a;
+(gdb) p a
+$1 = 45
+(gdb) n
+9   }
+(gdb) n
+main () at p2original.c:24
+24    q=input();
+(gdb) s
+input () at p2original.c:3
+3   {
+(gdb) n
+5     printf("enter the value of a\n");
+(gdb) n
+enter the value of a
+6     scanf("%d",&a);
+(gdb) n
+56
+7     return a;
+(gdb) p a
+$2 = 56
+(gdb) n
+9   }
+(gdb) n
+main () at p2original.c:25
+25    r=find_sum(p,q);
+(gdb) n
+26    output(p,q,r);
+(gdb) s
+output (a=45, b=56, sum=101) at p2original.c:18
+18    printf("sum of %d + %d=%d\n",a,b,sum);
+(gdb) p sum
+$3 = 101
+(gdb) n
+sum of 45 + 56=101
+19  }
+(gdb) n
+main () at p2original.c:27
+27    return 0;
+(gdb) n
+29  }(gdb) 
