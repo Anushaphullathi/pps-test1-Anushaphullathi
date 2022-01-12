@@ -1,16 +1,20 @@
 #include<stdio.h>
+int input()
+{
+  int x;
+  scanf("%d",&x);
+  return x;
+} 
+
 int cmp(int a,int b,int c)
 {
-  if(a>b)
+    
+  if(a>b && a>c)
   {
-    if(a>c)
-  
   return a;
   }
 
-else
-{
-  if(b>c)
+else if(b>c)
   {
     return b;
   }
@@ -21,12 +25,6 @@ else
 }
 }
 
-int input()
-{
-  int x;
-  scanf("%d",&x);
-  return x;
-}  
 int main()
 {
   int a,b,c,large;
