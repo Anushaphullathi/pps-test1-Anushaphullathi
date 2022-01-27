@@ -10,7 +10,7 @@ int sum_n(int n)
 {
   int i,sum=0;
   {
-    for(i=1;n>=i;i++)
+    for(i=1;i<=n;i++)
     sum =sum+i;
   }
   return sum;
